@@ -7,6 +7,7 @@ export function renderNav(activePage = '') {
     { href: '/how-it-works.html', label: 'How it Works', id: 'how' },
     { href: '/markets.html', label: 'Markets', id: 'markets' },
     { href: '/roadmap.html', label: 'Roadmap', id: 'roadmap' },
+    { href: '/support.html', label: 'Support', id: 'support' },
   ];
 
   document.getElementById('nav').innerHTML = `
@@ -72,6 +73,7 @@ export function renderFooter() {
           <h4>Resources</h4>
           <a href="https://worldscan.org/address/0x0bD43D8B3517Be6D2ed4E616898aec4DD769f50e" target="_blank">Smart Contract</a>
           <a href="https://github.com/ApollonSMK/WLDPrediction" target="_blank">GitHub</a>
+          <a href="/support.html">Support</a>
         </div>
         <div class="footer-col">
           <h4>Community</h4>

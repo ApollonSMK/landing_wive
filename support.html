@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support — WIVE</title>
+  <meta name="description" content="Need help with WIVE? Find answers to common questions, troubleshooting guides, and contact our support team."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <nav id="nav"></nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="tag">Help Center</span>
+      <h1>Support</h1>
+      <p class="page-hero-sub">Got a question? Find answers below or reach out to our team.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to the most common questions.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal" data-i="1">
+          <button class="faq-q" aria-expanded="false">
+            <span>What is WIVE?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>WIVE is a decentralized prediction market built on World Chain. You predict whether the price of BTC, ETH, or WLD will go up or down in the next 5 minutes. If you're right, you earn from the losing pool. Everything is on-chain, transparent, and settled automatically.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="2">
+          <button class="faq-q" aria-expanded="false">
+            <span>How do I access the app?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>WIVE is a Mini App inside the World App. To use it:</p>
+            <ol>
+              <li>Download and open the <strong>World App</strong> on your phone</li>
+              <li>Navigate to the <strong>Mini Apps</strong> section</li>
+              <li>Search for <strong>WIVE</strong> and open it</li>
+            </ol>
+            <p>You cannot access the prediction market from a regular web browser — World ID verification is required.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="3">
+          <button class="faq-q" aria-expanded="false">
+            <span>What do I need to start predicting?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>You need:</p>
+            <ul>
+              <li><strong>World App</strong> — with a verified World ID</li>
+              <li><strong>WLD tokens</strong> — in your World App wallet to place bets</li>
+            </ul>
+            <p>That's it. No MetaMask, no seed phrases, no browser extensions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="4">
+          <button class="faq-q" aria-expanded="false">
+            <span>How long does a round last?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Each prediction round lasts <strong>5 minutes</strong>. When a round ends, it is automatically settled by our on-chain bot, and a new round begins immediately. The market runs 24/7 with zero downtime.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="5">
+          <button class="faq-q" aria-expanded="false">
+            <span>How are prices determined?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Prices are fetched in real-time from the <strong>Binance API</strong>. The price at the start of a round is the "lock price", and the price at the end is the "close price". If the close price is higher than the lock price, UP wins. If lower, DOWN wins.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="6">
+          <button class="faq-q" aria-expanded="false">
+            <span>How do payouts work?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>When a round is settled:</p>
+            <ul>
+              <li>The winning side splits the losing side's pool proportionally</li>
+              <li>A small protocol fee (3%) is deducted from the total pool</li>
+              <li>Your winnings are available to claim directly on-chain</li>
+            </ul>
+            <p>Example: If you bet 1 WLD on UP and UP wins, and the UP pool is 10 WLD while the DOWN pool is 15 WLD, your share would be 1/10 × 15 × 0.97 = ~1.455 WLD.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="7">
+          <button class="faq-q" aria-expanded="false">
+            <span>Is WIVE safe? Can I trust it?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>WIVE is fully on-chain:</p>
+            <ul>
+              <li>Smart contract is <strong>verified and open-source</strong> on WorldScan</li>
+              <li>Your funds are never held by us — they go directly to the smart contract</li>
+              <li>Settlement is automated and cannot be tampered with</li>
+              <li>All users are verified humans via World ID — no bots</li>
+            </ul>
+            <p><a href="https://worldscan.org/address/0x0bD43D8B3517Be6D2ed4E616898aec4DD769f50e" target="_blank">View the smart contract on WorldScan →</a></p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="8">
+          <button class="faq-q" aria-expanded="false">
+            <span>What happens if the price doesn't change?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>If the close price is exactly equal to the lock price (extremely rare), the round is considered void and all bets are refunded to the participants.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-i="9">
+          <button class="faq-q" aria-expanded="false">
+            <span>Will there be a WIVE token?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Yes! The <strong>$WIVE token</strong> is planned for Phase 3 of our roadmap. It will serve as the native utility token for the protocol — used for governance, staking, fee discounts, and premium features. Early users and OGs will be eligible for the airdrop. <a href="/roadmap.html">See the full roadmap →</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Troubleshooting</h2>
+        <p>Having issues? Try these solutions.</p>
+      </div>
+      <div class="trouble-grid">
+        <div class="trouble-card reveal" data-i="1">
+          <div class="tr-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+          </div>
+          <h3>App won't load</h3>
+          <p>Make sure you're opening WIVE <strong>inside the World App</strong>, not in a regular browser. WIVE requires World ID verification and will not work outside the World App.</p>
+        </div>
+        <div class="trouble-card reveal" data-i="2">
+          <div class="tr-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20m5-16H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H7"/></svg>
+          </div>
+          <h3>Transaction failed</h3>
+          <p>Check that you have enough <strong>WLD</strong> in your wallet to cover the bet amount plus gas fees. Also ensure you're connected to the <strong>World Chain</strong> network.</p>
+        </div>
+        <div class="trouble-card reveal" data-i="3">
+          <div class="tr-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Round didn't settle</h3>
+          <p>Rounds are settled by our automated bot. In rare cases, there may be a brief delay. Settlements typically complete within 30 seconds of a round ending. If a round remains unsettled for more than 5 minutes, contact us.</p>
+        </div>
+        <div class="trouble-card reveal" data-i="4">
+          <div class="tr-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3>Profile not showing</h3>
+          <p>Your profile is created automatically on your first visit. If your avatar or stats aren't loading, try closing and reopening the mini app. Your on-chain data is always safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact Us</h2>
+        <p>Can't find your answer? Reach out directly.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:support@wive.pro" class="contact-card reveal" data-i="1">
+          <div class="ct-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>support@wive.pro</p>
+        </a>
+        <a href="#" class="contact-card reveal" data-i="2">
+          <div class="ct-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <h3>Discord</h3>
+          <p>Join our community server</p>
+        </a>
+        <a href="#" class="contact-card reveal" data-i="3">
+          <div class="ct-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </div>
+          <h3>Twitter / X</h3>
+          <p>Follow @wive_pro</p>
+        </a>
+        <a href="#" class="contact-card reveal" data-i="4">
+          <div class="ct-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.73 18l-8-14a2 2 0 00-3.48 0l-8 14A2 2 0 004 21h16a2 2 0 001.73-3z"/><path d="M12 9v4m0 4h.01"/></svg>
+          </div>
+          <h3>Telegram</h3>
+          <p>@wive_official</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script type="module">
+    import { initPage } from '/components.js';
+    initPage('support');
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        // Toggle current
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

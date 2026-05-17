@@ -12,6 +12,7 @@ export default defineConfig({
         howItWorks: resolve(__dirname, 'how-it-works.html'),
         markets: resolve(__dirname, 'markets.html'),
         roadmap: resolve(__dirname, 'roadmap.html'),
+        support: resolve(__dirname, 'support.html'),
       },
     },
   },
