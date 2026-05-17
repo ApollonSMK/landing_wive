@@ -4,294 +4,302 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WIVE — Decentralized Prediction Market on World Chain</title>
-  <meta name="description" content="Predict BTC, ETH & WLD prices. Earn WLD rewards. 100% on-chain. Verified by World ID." />
+  <meta name="description" content="Predict BTC, ETH & WLD prices every 5 minutes. Earn WLD rewards. 100% on-chain, verified by World ID." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <!-- Canvas particles -->
-  <canvas id="particles"></canvas>
-
-  <!-- Gradient orbs -->
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
   <!-- Nav -->
   <nav id="nav">
-    <div class="nav-inner">
+    <div class="container nav-inner">
       <a href="/" class="logo">
-        <div class="logo-hex">🐝</div>
+        <svg class="logo-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" fill="url(#g1)" />
+          <path d="M16 8l6 3.5v7L16 22l-6-3.5v-7L16 8z" fill="#fff" opacity=".9"/>
+          <defs><linearGradient id="g1" x1="4" y1="2" x2="28" y2="30"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#D97706"/></linearGradient></defs>
+        </svg>
         <span>WIVE</span>
       </a>
-      <div class="nav-links" id="navLinks">
+      <div class="nav-links">
         <a href="#how">How it Works</a>
         <a href="#features">Features</a>
-        <a href="#assets">Markets</a>
+        <a href="#markets">Markets</a>
         <a href="#roadmap">Roadmap</a>
       </div>
-      <a href="https://app.wive.pro" class="btn-launch" target="_blank">
-        Launch App <span class="arrow">→</span>
-      </a>
+      <a href="https://app.wive.pro" class="btn btn-primary btn-sm" target="_blank">Launch App</a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="pulse-dot"></span>
-        <span>Live on World Chain</span>
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-dots"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Live on World Chain
       </div>
-      <h1>
-        <span class="line">The Future of</span>
-        <span class="line highlight">Prediction Markets</span>
-      </h1>
-      <p class="hero-desc">
-        Predict crypto prices every 5 minutes. Win from the pool.<br />
-        100% on-chain. Verified by World ID.
-      </p>
-      <div class="hero-btns">
-        <a href="https://app.wive.pro" class="btn-gold" target="_blank">
-          <span class="btn-glow"></span>
-          🐝 Start Predicting
+      <h1>Predict Crypto.<br/><span class="accent">Win Real Rewards.</span></h1>
+      <p class="hero-sub">The first decentralized prediction market on World Chain. Bet on BTC, ETH & WLD prices every 5 minutes. 100% on-chain, settled automatically.</p>
+      <div class="hero-cta">
+        <a href="https://app.wive.pro" class="btn btn-primary btn-lg" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Start Predicting
         </a>
-        <a href="#how" class="btn-glass">
+        <a href="#how" class="btn btn-outline btn-lg">
           Learn More
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </a>
       </div>
-
-      <!-- Live ticker -->
-      <div class="ticker">
-        <div class="ticker-item">
-          <img src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" alt="BTC" />
-          <span class="ticker-name">BTC</span>
-          <span class="ticker-price" id="btcPrice">$103,420</span>
-          <span class="ticker-change up">+2.4%</span>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <strong>3</strong><span>Markets</span>
         </div>
-        <div class="ticker-sep"></div>
-        <div class="ticker-item">
-          <img src="https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628" alt="ETH" />
-          <span class="ticker-name">ETH</span>
-          <span class="ticker-price" id="ethPrice">$2,480</span>
-          <span class="ticker-change up">+1.8%</span>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <strong>5 min</strong><span>Rounds</span>
         </div>
-        <div class="ticker-sep"></div>
-        <div class="ticker-item">
-          <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="WLD" />
-          <span class="ticker-name">WLD</span>
-          <span class="ticker-price" id="wldPrice">$1.42</span>
-          <span class="ticker-change down">-0.3%</span>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <strong>24/7</strong><span>Settlement</span>
         </div>
-      </div>
-    </div>
-
-    <!-- Floating stats -->
-    <div class="float-cards">
-      <div class="float-card fc-1">
-        <div class="fc-label">Round Duration</div>
-        <div class="fc-value">5 min</div>
-      </div>
-      <div class="float-card fc-2">
-        <div class="fc-label">Settlement</div>
-        <div class="fc-value">24/7</div>
-      </div>
-      <div class="float-card fc-3">
-        <div class="fc-label">Verified</div>
-        <div class="fc-value">World ID</div>
+        <div class="proof-sep"></div>
+        <div class="proof-item">
+          <strong>WLD</strong><span>Rewards</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== HOW IT WORKS ===== -->
+  <!-- Logos / Trust bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <p>Powered by</p>
+      <div class="trust-logos">
+        <div class="trust-item">
+          <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="World Chain" />
+          <span>World Chain</span>
+        </div>
+        <div class="trust-item">
+          <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="World ID" />
+          <span>World ID</span>
+        </div>
+        <div class="trust-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          <span>Binance API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
   <section class="section" id="how">
-    <div class="section-header">
-      <span class="section-tag">Simple & Fast</span>
-      <h2>How it Works</h2>
-      <p>Three steps. Five minutes. Real rewards.</p>
-    </div>
-    <div class="steps-track">
-      <div class="step-line"></div>
-      <div class="step" data-aos="1">
-        <div class="step-num">01</div>
-        <div class="step-icon-wrap">
-          <div class="step-icon">🌐</div>
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Simple & Fast</span>
+        <h2>How it Works</h2>
+        <p>Three steps to start earning. No complexity.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card" data-i="1">
+          <div class="step-num">01</div>
+          <div class="step-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Connect</h3>
+          <p>Open in World App. Your World ID is your identity — no wallets or extensions needed.</p>
         </div>
-        <h3>Connect</h3>
-        <p>Open in World App. Your World ID is your identity — no wallets, no extensions.</p>
-      </div>
-      <div class="step" data-aos="2">
-        <div class="step-num">02</div>
-        <div class="step-icon-wrap">
-          <div class="step-icon">📊</div>
+        <div class="step-card" data-i="2">
+          <div class="step-num">02</div>
+          <div class="step-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Predict</h3>
+          <p>Pick BTC, ETH, or WLD. Will the price go <span class="up">UP</span> or <span class="down">DOWN</span>? Place your bet in WLD.</p>
         </div>
-        <h3>Predict</h3>
-        <p>Pick an asset. Will it go <span class="green">UP</span> or <span class="red">DOWN</span> in 5 minutes? Place your WLD bet.</p>
-      </div>
-      <div class="step" data-aos="3">
-        <div class="step-num">03</div>
-        <div class="step-icon-wrap">
-          <div class="step-icon">💰</div>
-        </div>
-        <h3>Earn</h3>
-        <p>Correct predictions win from the pool. Auto-settled on-chain. Claim anytime.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES ===== -->
-  <section class="section" id="features">
-    <div class="section-header">
-      <span class="section-tag">Why WIVE</span>
-      <h2>Built Different</h2>
-      <p>Not another prediction app. A new standard.</p>
-    </div>
-    <div class="bento">
-      <div class="bento-card bento-big">
-        <div class="bento-glow"></div>
-        <div class="bento-icon">🔒</div>
-        <h3>100% On-Chain</h3>
-        <p>Every bet, settlement, and payout lives on World Chain. Transparent. Immutable. No middlemen. Your funds, your control.</p>
-        <div class="bento-tag">Smart Contract Verified</div>
-      </div>
-      <div class="bento-card">
-        <div class="bento-icon">⚡</div>
-        <h3>5-Min Rounds</h3>
-        <p>Fast-paced markets. New rounds every 5 minutes. No waiting days for results.</p>
-      </div>
-      <div class="bento-card">
-        <div class="bento-icon">🌍</div>
-        <h3>World ID</h3>
-        <p>Every user is verified human. Zero bots. Zero multi-accounts. Fair play.</p>
-      </div>
-      <div class="bento-card">
-        <div class="bento-icon">📈</div>
-        <h3>Binance Prices</h3>
-        <p>Real-time price feeds. No manipulation. No delays. Prices you can trust.</p>
-      </div>
-      <div class="bento-card">
-        <div class="bento-icon">🤖</div>
-        <h3>Auto Settler</h3>
-        <p>Our bot runs 24/7. Settles rounds. Creates new ones. Zero downtime.</p>
-      </div>
-      <div class="bento-card">
-        <div class="bento-icon">🏆</div>
-        <h3>Leaderboard</h3>
-        <p>Compete globally. Track win rates. Climb the ranks. Become the top predictor.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MARKETS ===== -->
-  <section class="section" id="assets">
-    <div class="section-header">
-      <span class="section-tag">Live Markets</span>
-      <h2>Trade What You Know</h2>
-      <p>Three of crypto's biggest assets. More coming soon.</p>
-    </div>
-    <div class="markets">
-      <div class="market-card">
-        <div class="market-shine"></div>
-        <img src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" alt="Bitcoin" />
-        <div class="market-info">
-          <div class="market-name">Bitcoin</div>
-          <div class="market-sym">BTC/USD</div>
-        </div>
-        <div class="market-badge">LIVE</div>
-      </div>
-      <div class="market-card">
-        <div class="market-shine"></div>
-        <img src="https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628" alt="Ethereum" />
-        <div class="market-info">
-          <div class="market-name">Ethereum</div>
-          <div class="market-sym">ETH/USD</div>
-        </div>
-        <div class="market-badge">LIVE</div>
-      </div>
-      <div class="market-card">
-        <div class="market-shine"></div>
-        <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="Worldcoin" />
-        <div class="market-info">
-          <div class="market-name">Worldcoin</div>
-          <div class="market-sym">WLD/USD</div>
-        </div>
-        <div class="market-badge">LIVE</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ROADMAP ===== -->
-  <section class="section" id="roadmap">
-    <div class="section-header">
-      <span class="section-tag">The Vision</span>
-      <h2>Roadmap</h2>
-      <p>Where we've been. Where we're going.</p>
-    </div>
-    <div class="timeline">
-      <div class="tl-item done">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-phase">Phase 1 <span class="tl-status done">✓ Complete</span></div>
-          <h3>Launch</h3>
-          <p>Smart contract deployment • World ID integration • Real-time Binance prices • Automated 24/7 settlement • Leaderboard & results</p>
-        </div>
-      </div>
-      <div class="tl-item active">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-phase">Phase 2 <span class="tl-status active">In Progress</span></div>
-          <h3>Growth</h3>
-          <p>World App mini-app submission • Community building • Marketing campaigns • Avatar customization • More trading pairs</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-phase">Phase 3</div>
-          <h3>WIVE Token</h3>
-          <p>Native token launch • Staking rewards • Governance system • Prediction markets with WIVE token</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-phase">Phase 4</div>
-          <h3>Ecosystem</h3>
-          <p>Multi-chain expansion • Advanced markets (stocks, forex) • Developer API • DAO governance</p>
+        <div class="step-card" data-i="3">
+          <div class="step-num">03</div>
+          <div class="step-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20m5-16H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H7"/></svg>
+          </div>
+          <h3>Earn</h3>
+          <p>Correct predictions win from the pool. Everything is auto-settled on-chain. Claim anytime.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta">
-    <div class="cta-bg"></div>
-    <div class="cta-content">
-      <h2>Join the Hive</h2>
-      <p>Your first prediction is waiting.</p>
-      <a href="https://app.wive.pro" class="btn-gold btn-xl" target="_blank">
-        <span class="btn-glow"></span>
-        🐝 Launch App
+  <!-- Features -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Why WIVE</span>
+        <h2>Built Different</h2>
+        <p>Not another prediction app — a new standard.</p>
+      </div>
+      <div class="features-bento">
+        <div class="f-card f-hero-card">
+          <div class="f-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3>100% On-Chain</h3>
+          <p>Every bet, settlement, and payout lives on World Chain. Transparent. Immutable. No middlemen, no custodians.</p>
+          <span class="f-badge">Smart Contract Verified</span>
+        </div>
+        <div class="f-card">
+          <div class="f-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>5-Min Rounds</h3>
+          <p>Fast-paced rounds that settle automatically. No waiting days for results.</p>
+        </div>
+        <div class="f-card">
+          <div class="f-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>World ID</h3>
+          <p>Every user is a verified human. Zero bots, zero multi-accounts.</p>
+        </div>
+        <div class="f-card">
+          <div class="f-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Binance Prices</h3>
+          <p>Real-time price feeds. No manipulation or delays.</p>
+        </div>
+        <div class="f-card">
+          <div class="f-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Auto Settler</h3>
+          <p>Our bot runs 24/7 — settles rounds and creates new ones.</p>
+        </div>
+        <div class="f-card">
+          <div class="f-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7m11-3a3 3 0 00-3 3v4"/><path d="M12 12v-2a3 3 0 00-6 0v2"/><rect x="4" y="12" width="16" height="10" rx="2"/></svg>
+          </div>
+          <h3>Leaderboard</h3>
+          <p>Compete globally. Track your win rate and climb the ranks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="section" id="markets">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Live Markets</span>
+        <h2>Trade What You Know</h2>
+        <p>Three of crypto's biggest assets. More coming soon.</p>
+      </div>
+      <div class="markets-row">
+        <div class="market-card">
+          <img src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" alt="Bitcoin" />
+          <div>
+            <h3>Bitcoin</h3>
+            <span class="market-pair">BTC / USD</span>
+          </div>
+          <div class="market-live">LIVE</div>
+        </div>
+        <div class="market-card">
+          <img src="https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628" alt="Ethereum" />
+          <div>
+            <h3>Ethereum</h3>
+            <span class="market-pair">ETH / USD</span>
+          </div>
+          <div class="market-live">LIVE</div>
+        </div>
+        <div class="market-card">
+          <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="Worldcoin" />
+          <div>
+            <h3>Worldcoin</h3>
+            <span class="market-pair">WLD / USD</span>
+          </div>
+          <div class="market-live">LIVE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="section section-alt" id="roadmap">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">The Vision</span>
+        <h2>Roadmap</h2>
+        <p>Where we've been, where we're going.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item done">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-label">Phase 1 <span class="tl-done">Complete</span></span>
+            <h3>Launch</h3>
+            <p>Smart contract • World ID • Binance prices • 24/7 settlement • Leaderboard</p>
+          </div>
+        </div>
+        <div class="tl-item active">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-label">Phase 2 <span class="tl-active">In Progress</span></span>
+            <h3>Growth</h3>
+            <p>World App submission • Community • Marketing • Avatar system • More pairs</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-label">Phase 3</span>
+            <h3>WIVE Token</h3>
+            <p>Native token • Staking rewards • Governance • WIVE-based markets</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-label">Phase 4</span>
+            <h3>Ecosystem</h3>
+            <p>Multi-chain • Stocks & forex • Developer API • DAO governance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>Ready to predict?</h2>
+      <p>Join the hive. Your first prediction is waiting.</p>
+      <a href="https://app.wive.pro" class="btn btn-primary btn-lg" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Launch App
       </a>
       <div class="cta-links">
-        <a href="https://worldscan.org/address/0x0bD43D8B3517Be6D2ed4E616898aec4DD769f50e" target="_blank">Smart Contract ↗</a>
-        <a href="https://github.com/ApollonSMK/WLDPrediction" target="_blank">GitHub ↗</a>
+        <a href="https://worldscan.org/address/0x0bD43D8B3517Be6D2ed4E616898aec4DD769f50e" target="_blank">Smart Contract →</a>
+        <a href="https://github.com/ApollonSMK/WLDPrediction" target="_blank">GitHub →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
+    <div class="container footer-inner">
+      <div class="footer-brand">
         <a href="/" class="logo">
-          <div class="logo-hex">🐝</div>
+          <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2L28 9v14l-12 7L4 23V9l12-7z" fill="url(#g2)"/>
+            <path d="M16 8l6 3.5v7L16 22l-6-3.5v-7L16 8z" fill="#fff" opacity=".9"/>
+            <defs><linearGradient id="g2" x1="4" y1="2" x2="28" y2="30"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#D97706"/></linearGradient></defs>
+          </svg>
           <span>WIVE</span>
         </a>
-        <p>Decentralized Prediction Market<br />Built on World Chain</p>
+        <p>Decentralized Prediction Market<br/>Built on World Chain</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -299,7 +307,7 @@
           <a href="https://app.wive.pro" target="_blank">Launch App</a>
           <a href="#how">How it Works</a>
           <a href="#features">Features</a>
-          <a href="#assets">Markets</a>
+          <a href="#markets">Markets</a>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
@@ -314,8 +322,8 @@
         </div>
       </div>
     </div>
-    <div class="footer-bar">
-      © 2026 WIVE. All rights reserved.
+    <div class="container footer-bar">
+      <p>© 2026 WIVE. All rights reserved.</p>
     </div>
   </footer>
 
