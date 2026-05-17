@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Markets — WIVE</title>
+  <meta name="description" content="View the live prediction markets on WIVE — Bitcoin, Ethereum, and Worldcoin."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <nav id="nav"></nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="tag">Live Markets</span>
+      <h1>Markets</h1>
+      <p class="page-hero-sub">Three of crypto's biggest assets, running 24/7 with 5-minute rounds.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="market-detail-grid">
+        <div class="md-card reveal" data-i="1">
+          <div class="md-header">
+            <img src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" alt="Bitcoin"/>
+            <div>
+              <h2>Bitcoin</h2>
+              <span class="md-pair">BTC / USD</span>
+            </div>
+            <div class="md-live">LIVE</div>
+          </div>
+          <div class="md-body">
+            <p>The original cryptocurrency. Bitcoin is the most traded and most liquid crypto asset in the world. Its price movements create constant prediction opportunities.</p>
+            <div class="md-stats">
+              <div class="md-stat"><span class="md-stat-label">Round Duration</span><strong>5 minutes</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Price Source</span><strong>Binance</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Settlement</span><strong>Automatic</strong></div>
+            </div>
+          </div>
+          <a href="https://app.wive.pro" class="btn btn-primary" target="_blank">Predict BTC →</a>
+        </div>
+
+        <div class="md-card reveal" data-i="2">
+          <div class="md-header">
+            <img src="https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628" alt="Ethereum"/>
+            <div>
+              <h2>Ethereum</h2>
+              <span class="md-pair">ETH / USD</span>
+            </div>
+            <div class="md-live">LIVE</div>
+          </div>
+          <div class="md-body">
+            <p>The backbone of DeFi and smart contracts. Ethereum's price is driven by ecosystem growth, gas fees, and macro events — making it a fascinating prediction target.</p>
+            <div class="md-stats">
+              <div class="md-stat"><span class="md-stat-label">Round Duration</span><strong>5 minutes</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Price Source</span><strong>Binance</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Settlement</span><strong>Automatic</strong></div>
+            </div>
+          </div>
+          <a href="https://app.wive.pro" class="btn btn-primary" target="_blank">Predict ETH →</a>
+        </div>
+
+        <div class="md-card reveal" data-i="3">
+          <div class="md-header">
+            <img src="https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696086721" alt="Worldcoin"/>
+            <div>
+              <h2>Worldcoin</h2>
+              <span class="md-pair">WLD / USD</span>
+            </div>
+            <div class="md-live">LIVE</div>
+          </div>
+          <div class="md-body">
+            <p>The native token of World Chain. WLD is both the currency of WIVE and a tradeable asset. Predict its price and earn more of it — a natural fit.</p>
+            <div class="md-stats">
+              <div class="md-stat"><span class="md-stat-label">Round Duration</span><strong>5 minutes</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Price Source</span><strong>Binance</strong></div>
+              <div class="md-stat"><span class="md-stat-label">Settlement</span><strong>Automatic</strong></div>
+            </div>
+          </div>
+          <a href="https://app.wive.pro" class="btn btn-primary" target="_blank">Predict WLD →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script type="module">import { initPage } from '/components.js'; initPage('markets');</script>
+</body>
+</html>
