@@ -426,6 +426,10 @@ footer { border-top: 1px solid var(--slate-100); padding: 48px 0 20px; }
 .rf-list { list-style: none; padding: 0; }
 .rf-list li { font-size: 14px; color: var(--slate-600); padding: 5px 0 5px 22px; position: relative; }
 .rf-list li::before { content: '→'; position: absolute; left: 0; color: var(--amber-500); }
+.rf-highlight { margin-top: 16px; padding: 20px; background: var(--slate-50); border-radius: 14px; border: 1px solid var(--slate-100); }
+.rf-highlight + .rf-highlight { margin-top: 10px; }
+.rf-highlight h4 { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 800; color: var(--amber-700); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+.rf-highlight .rf-list li { font-size: 13px; padding: 4px 0 4px 20px; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
